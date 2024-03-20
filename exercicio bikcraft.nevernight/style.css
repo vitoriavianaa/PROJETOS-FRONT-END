@@ -1,0 +1,107 @@
+body {
+  font-family: arial;
+  background-color: #f7f7f7;
+  color: #000;
+  margin: 0px;
+  display: grid; /* aqui ele colocou grid no body porque como todos os itens estão juntamente alinhados, então já podia colocar display: grid; */
+  gap: 60px; /* espaçamento */
+  justify-items: center; /* alinhando os itens ao centro */
+  margin-top: 60px;
+}
+
+img {
+  max-width: 100%; /* coloca aqui pra que a imagem respeite o tamanho do width do grid */
+  display: block; /* porque a imagem é considereada como inline block, então transforma ela em bloco. */
+  border-top-right-radius: 15px;
+}
+
+.links {
+  display: flex; /* colocou como flex para os itens ficarem na mesma linha e de forma que dá pra manipular melhor */
+  flex-wrap: wrap;
+  justify-content: center; /* justificando o "menu ao centro" */
+  gap: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  display: inline-block;
+  padding: 10px 30px;
+  margin: 5px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+p,
+h1,
+h2 {
+  margin: 0px; /* tira as margens pra manipular de maneira melhor */
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.conteudo {
+  display: grid; /* dentro do conteúdo coloca como display: grid novamente */
+  grid-template-columns: 1fr 1fr; /* estabelece duas colunas pro grid */
+  max-width: 1000px; /* estabelece um tamanho */
+}
+
+.introducao {
+  background-color: white;
+  padding: 40px;
+  text-align: right; /* porque é necessário alinhar o texto, não somente o conteúdo todo. */
+  display: grid;
+  align-content: center; /* o align-content entra para dizer que o conteúdo não precisa se adaptar 100% ao espaço em branco que está sobrando. ele pode se firmar em uma determinada posição, que no caso aqui foi determinada como centro. */
+  gap: 20px;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  justify-items: end; /* para que os itens, como o botão, não tente preencher também todo o espaço restante que faltou dos lados, então neste caso justificamos no end. */
+}
+
+.botao {
+  background-color: #b40909;
+  color: white;
+  border-radius: 5px;
+  padding: 15px 30px;
+}
+
+.introducao-subtitulo {
+  font-size: 60px;
+  text-transform: uppercase;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  align-self: center; /* como estamos conversando apenas com UM ITEM, que é a palavra LIVROS, então podemos colocar align self. */
+}
+
+/* aqui vai trabalhar com todo o conteúdo envolvendo a parte que se refere aos livros */
+.livros {
+  background: white;
+  padding: 40px;
+  border-bottom-right-radius: 15px;
+}
+
+/* aqui vai trabalhar com os itens em si. nevernight, etc e também os icones de livro */
+.item {
+  display: grid;
+  grid-template-columns: auto 1fr; /* vai respeitar o tamanho do ícone na primeira coluna e o segundo vai receber 1fr de tamanho */
+  gap: 10px 20px;
+  padding: 20px;
+}
+
+.item p {
+  grid-column: 2; /* aloca o parágrafo na coluna 2, para que fiquem lado a lado */
+  font-weight: bold;
+}
+
+.rodape {
+  background: white;
+  width: 100%;
+  text-align: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
